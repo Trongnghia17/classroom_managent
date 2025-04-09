@@ -64,6 +64,6 @@ class ProfileController extends Controller
         $user->password = Hash::make($request->password);
         $user->save();
 
-        return redirect()->route('password.form')->with('success', 'Mật khẩu đã được cập nhật thành công.');
+        return redirect()->route('dashboard')->with('success', 'Mật khẩu đã được cập nhật thành công.');
     }
 }
