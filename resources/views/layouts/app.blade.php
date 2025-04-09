@@ -167,7 +167,7 @@
                     <li class="dropdown ms-2">
                         <a class="rounded-circle" href="#!" role="button" id="dropdownUser" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="avatar avatar-md avatar-indicators avatar-online">
-                                <img alt="avatar" src="../assets/images/avatar/avatar-11.jpg" class="rounded-circle" />
+                                <img alt="avatar" src="{{ Auth::user()->profile_image && Storage::disk('public')->exists(Auth::user()->profile_image) ? asset('storage/' . Auth::user()->profile_image) : asset('assets/images/avatar/avatar-11.jpg') }}" class="rounded-circle" />
                             </div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownUser">
